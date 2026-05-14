@@ -773,7 +773,7 @@
         <span class="stat-label">Projects Built</span>
       </div>
       <div class="stat-card">
-        <span class="stat-num">200+</span>
+        <span class="stat-num">300+</span>
         <span class="stat-label">LeetCode Problems</span>
       </div>
       <div class="stat-card">
@@ -865,7 +865,7 @@
   <h2 class="section-title">Projects</h2>
   <div class="projects-grid">
 
-    <div class="project-card reveal">
+    <div class="project-card reveal" onclick="window.open('https://github.com/Shivam9621/defi-research-agent','_blank')" style="cursor:pointer">
       <div class="project-top">
         <div class="project-icon" style="background:rgba(124,106,245,0.12)">🤖</div>
         <div class="project-links">
@@ -1018,8 +1018,8 @@
     <div class="ach-item reveal">
       <div class="ach-icon">💻</div>
       <div>
-        <div class="ach-title">200+ LeetCode Problems Solved</div>
-        <div class="ach-desc">Consistent competitive programmer with strong DSA foundations across arrays, graphs, DP, and more.</div>
+        <div class="ach-title">300+ LeetCode Problems Solved</div>
+        <div class="ach-desc">Consistent competitive programmer with 300+ problems solved across arrays, graphs, DP, trees, and more.</div>
       </div>
     </div>
     <div class="ach-item reveal">
@@ -1096,7 +1096,7 @@
       <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
       GitHub
     </a>
-    <a href="https://leetcode.com" target="_blank" class="contact-link">
+    <a href="https://leetcode.com/u/shivamj18/" target="_blank" class="contact-link">
       <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
       LeetCode
     </a>
@@ -1155,5 +1155,20 @@
     });
   });
 </script>
+
+<script>
+document.querySelectorAll('.project-card').forEach(card => {
+  const ghLink = card.querySelector('.project-link[title="GitHub"]');
+  if (ghLink) {
+    card.style.cursor = 'pointer';
+    card.addEventListener('click', function(e) {
+      if (!e.target.closest('a')) {
+        window.open(ghLink.href, '_blank');
+      }
+    });
+  }
+});
+</script>
+
 </body>
 </html>
